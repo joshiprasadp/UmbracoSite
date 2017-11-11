@@ -1,0 +1,50 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<List<UmbracoSite.Models.NavigationListItem>>
+@using UmbracoSite.Models
+
+
+<div id="fh5co-header">
+    <header id="fh5co-header-section">
+        <div class="container">
+            <div class="nav-header">
+                <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+                <h1 id="fh5co-logo"><a href="index.html">Pentagon</a></h1>
+                <!-- START #fh5co-menu-wrap -->
+                <nav id="fh5co-menu-wrap" role="navigation">
+                    <ul class="sf-menu" id="fh5co-primary-menu">
+                        <li>@RenderChildItems(Model)</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+</div>
+
+
+
+@helper RenderChildItems(List<NavigationListItem> listItems)
+        {
+if (listItems != null)
+{
+    foreach (var item in listItems)
+    {
+            <li class="@(Umbraco.AssignedContentItem.Url == item.Link.Url ? "active" : null) @(item.HasChildren ? "fh5co-sub-ddown" : null)">
+                @if (!String.IsNullOrEmpty(item.Text))
+                {
+                    @item.Text
+                }
+                else if (item.Link != null)
+                {
+                    <a href="@item.Link.Url" target="@item.Link.Target">@item.Link.Text</a>
+                }
+
+                @if (item.HasChildren)
+                {
+                    <ul class="sub-menu">
+                        @RenderChildItems(item.Items)
+                    </ul>
+                }
+            </li>
+    }
+}
+}

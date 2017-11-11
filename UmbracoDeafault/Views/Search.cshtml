@@ -1,0 +1,53 @@
+﻿@inherits   Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Search>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+
+	var searchQuery = Request.QueryString["searchTerm"];
+}
+
+
+<div class="contact page-header">
+	<div class="page-header-overlay">
+		<div class="main-content-wrapper">
+			<div class="page-title-wrapper">
+				<h1 class="page-title" data-ix="fade-in-on-load">Search</h1>
+				<h1 class="page-title subtitle" data-ix="fade-in-on-load-2"></h1>
+			</div>
+			<div class="favorites-row w-row">
+				@using (Html.BeginForm("index", "search", FormMethod.Get))
+				{
+					<fieldset>
+						@Html.TextBox("searchTerm", "", new { @class = "field w-input", placeholder = "recipe name" })
+						<i class="fa fa-search"></i>
+						<input class="button w-button" data-wait="Please wait..." type="submit" value="Search">
+					</fieldset>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+@if (!string.IsNullOrEmpty(searchQuery))
+{
+	<section name="search-result">
+		<div class="main-content-wrapper">
+			@foreach (var result in Umbraco.Search(searchQuery))
+			{
+				<div class="recipe-row w-row">
+					<div class="recipe-column-left w-col w-col-8">
+						<h1 class="recipe-intro-title">
+							<a href="@result.Url">@result.GetPropertyValue("header")</a>
+						</h1>
+						<div class="recipe-block-info-block" style="padding-top: 56.39999999999999%;">
+							@result.GetPropertyValue("headerDescription")
+						</div>
+					</div>
+				</div> 
+			}
+		</div>
+	</section>
+}
+
+

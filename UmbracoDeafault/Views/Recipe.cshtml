@@ -1,0 +1,144 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Recipe>
+@*@using ContentModels = Umbraco.Web.PublishedContentModels;*@
+@{
+    Layout = "Master.cshtml";
+}
+
+<section name="sub-categories">
+    @Html.Partial("Header_Footer/show-categories")
+</section>
+
+
+
+
+
+<section name="Page Header">
+    <div class="page-title-header">
+        <div class="main-content-wrapper">
+            <a class="back-to-overview-link" href="@Model.Content.Parent.Url">Back to overview</a>
+            <h1 class="page-header-title" data-ix="fade-in-on-load">@Model.Content.Header</h1>
+            <h2 class="page-header-title subtitle" data-ix="fade-in-on-load-2">@Model.Content.HeaderDescription</h2>
+        </div>
+    </div>
+    <div class="page-image-header" style="background-image: url('@Model.Content.RecipeImage.Url');">
+        <div class="recipe-image-overlay">
+            <div class="main-content-wrapper recipe-image">
+                <div class="recipe-summary-block w-clearfix" data-ix="fade-in-on-load-3">
+                    <div class="recipe-summary-item-block">
+                        <img class="recipe-summary-icon" sizes="28px" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c841c22687776b7c708599_Icon-pan.png" srcset="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c841c22687776b7c708599_Icon-pan-p-500x500.png 500w, http://uploads.webflow.com/56c71dfd442dd14d71672871/56c841c22687776b7c708599_Icon-pan.png 512w">
+                        <div class="description recipe-summary-title">Category</div>
+                        <div class="recipe-summary-title">@Model.Content.Parent.GetPropertyValue("categoryName")</div>
+                    </div>
+                    <div class="recipe-summary-item-block">
+                        <img class="recipe-summary-icon" sizes="28px" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c841bd1e4c5a667cd9b06a_Icon-plate.png" srcset="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c841bd1e4c5a667cd9b06a_Icon-plate-p-500x500.png 500w, http://uploads.webflow.com/56c71dfd442dd14d71672871/56c841bd1e4c5a667cd9b06a_Icon-plate.png 512w">
+                        <div class="description recipe-summary-title">Calories</div>
+                        <div class="recipe-summary-title">@Model.Content.Calories.ToString() kcal</div>
+                    </div>
+                    <div class="recipe-summary-item-block">
+                        <img class="recipe-summary-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c71dfd442dd14d71672881_Icon-clock.png">
+                        <div class="description recipe-summary-title">Time</div>
+                        <div class="recipe-summary-title">@Model.Content.CookingTimeHour.ToString() hours @Model.Content.CookingTimeMinutes.ToString() minutes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section">
+    <div class="main-content-wrapper">@*main-content-wrapper*@
+        <div class="recipe-row w-row">
+            <div class="recipe-column-left w-col w-col-12">
+                <h1 class="recipe-intro-title">Video</h1>
+                <div class="recipe-video w-embed w-video" style="padding-top: 56.39999999999999%;">
+                    @*<iframe src="@Model.Content.VideoUrl" frameborder="0" allowfullscreen="yes" webkitallowfullscreen="" mozallowfullscreen=""></iframe>*@
+                    @Model.Content.YoutubeVideoLink
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div class="recipe-row w-row">
+            
+            <div class="recipe-column-right w-col w-col-8">
+                <div class="recipe-content-block">
+                    <h1 class="recipe-intro-title">Instructions</h1>
+                    <div class="recipe-rich-text-block w-richtext">
+                        @Html.Raw(Model.Content.Instructions)
+                    </div>
+                </div>
+            </div>
+            <div class="recipe-column-left w-col w-col-4">
+                <div class="sidebar-block">
+                    <div class="block-title">Ingredients:</div>
+                    <div class="ingredients-text-block w-richtext">
+                        <ul>
+                            @Html.Raw(Model.Content.Ingredients)
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebar-block">
+                    <div class="block-title">Needed:</div>
+                    <div class="ingredients-text-block w-richtext">
+                        <ul>
+                            @Html.Raw(Model.Content.EquipmentNeeded)
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="section tint">
+    <div class="main-content-wrapper">
+        <div class="w-row">
+            <div class="recipe-by-column-left w-col w-col-5 w-col-stack">
+                <div class="recipe-by-block w-clearfix">
+                    <img class="recipe-author-profile" sizes="(max-width: 479px) 70px, 80px" src="https://daks2k3a4ib2z.cloudfront.net/56c71e9678ef0cf7030714ab/56c8704d460cb4940dbab481_Cook-1.jpg" srcset="https://daks2k3a4ib2z.cloudfront.net/56c71e9678ef0cf7030714ab/56c8704d460cb4940dbab481_Cook-1-p-500x.jpeg 500w, https://daks2k3a4ib2z.cloudfront.net/56c71e9678ef0cf7030714ab/56c8704d460cb4940dbab481_Cook-1-p-800x.jpeg 800w, https://daks2k3a4ib2z.cloudfront.net/56c71e9678ef0cf7030714ab/56c8704d460cb4940dbab481_Cook-1-p-1080x.jpeg 1080w, https://daks2k3a4ib2z.cloudfront.net/56c71e9678ef0cf7030714ab/56c8704d460cb4940dbab481_Cook-1.jpg 1138w">
+                    <div class="recipe-by-title">This is a recipe by</div>
+                    <div class="name recipe-by-title">Akira Johnson</div><a class="view-all" href="/cooks/akira-johnson">View all my recipes</a>
+                </div>
+            </div>
+            <div class="recipe-tags-column-right w-col w-col-7 w-col-stack">
+                <h6 class="small-column-title">Recipe Tags:</h6>
+                <div class="w-dyn-list">
+                    <div class="w-clearfix w-dyn-items w-row">
+                        <div class="tag-item w-col w-col-4 w-dyn-item"><a class="tag-button w-button" href="/tags/christmas">Christmas</a></div>
+                        <div class="tag-item w-col w-col-4 w-dyn-item"><a class="tag-button w-button" href="/tags/italian">Italian</a></div>
+                        <div class="tag-item w-col w-col-4 w-dyn-item"><a class="tag-button w-button" href="/tags/new-year">New year</a></div>
+                        <div class="tag-item w-col w-col-4 w-dyn-item"><a class="tag-button w-button" href="/tags/picknick">Picknick</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+<div class="color section">
+    <div class="main-content-wrapper">
+        <div class="section-title-wrapper">
+            <h4 class="overall-section-title">Did you try these already?</h4>
+        </div>
+        <div class="w-dyn-list">
+            <div class="w-clearfix w-dyn-items w-row">
+                @foreach (Recipe item in Model.Content.TryRecipes)
+                {
+                    <div class="recipe-item w-col w-col-4 w-dyn-item">
+                        <a class="recipe-category-link-block w-button" href="@item.Parent.Url">@item.Parent.GetPropertyValue("categoryName")</a>
+                        <a class="recipe-image-block w-inline-block" style="background-image: url('@item.RecipeImage.Url');" href="@item.Url">
+                            <div class="recipe-overlay-block" data-ix="show-video-overlay-icon">
+                                <div class="recipe-title-wrapper">
+                                    <div class="recipe-block-info-block w-clearfix">
+                                        <img class="recipe-block-small-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c7421792be8b00043c9fee_Icon-clock-white.png" width="15">
+                                        <div class="recipe-block-info-title">@item.CookingTimeHour hours @item.CookingTimeMinutes minutes</div>
+                                    </div>
+                                    <div class="recipe-title">@item.Header</div>
+                                </div>
+                                <div class="recipe-video-overlay-block" data-ix="hide-video-overlay-icon"><img class="overlay-play-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c8496c0f1965960d68c90a_Icon-play-2.png"></div>
+                            </div>
+                        </a>
+                    </div>
+                }
+                
+            </div>
+        </div>
+    </div>
+</div>

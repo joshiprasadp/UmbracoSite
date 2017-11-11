@@ -1,0 +1,62 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Recipes>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+
+
+<div class="top-section" id="top">
+	<div class="centered main-content-wrapper">
+		<a class="show-categories top-nav-link w-button w-hidden-main w-hidden-medium" data-ix="show-mobile-categories" href="#">Show Recipe Categories</a>
+		<div class="categories-wrapper"><a class="top-nav-link w-button" href="/recipes">All Recipes</a><a class="top-nav-link w-button" href="/favorite-recipes">Favorites</a><a class="top-nav-link w-button" href="/video-recipes">With Video</a><a class="top-nav-link w-button" href="/category/appetizers">Appetizers</a><a class="top-nav-link w-button" href="/category/salads">Salads</a><a class="top-nav-link w-button" href="/category/soups">Soups</a><a class="top-nav-link w-button" href="/category/desserts">Desserts</a><a class="top-nav-link w-button" href="/category/main-dishes">Main Dishes</a><a class="top-nav-link w-button" href="/categories">View All Categories</a></div>
+	</div>
+</div>
+<div class="page-header videos">
+	<div class="page-header-overlay with-top-categories">
+		<div class="main-content-wrapper">
+			<div class="page-title-wrapper">
+				<h1 class="page-title" data-ix="fade-in-on-load">Video Recipes</h1>
+				<h1 class="page-title subtitle" data-ix="fade-in-on-load-2">All recipes with a video.</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<h3>@Model.Content.Children.Count()</h3>
+
+@foreach (var item in Model.Content.Children)
+{
+	<h3>@item.Url</h3>
+
+}
+
+<div class="section">
+	<div class="main-content-wrapper">
+		<div class="w-dyn-list">
+			<div class="w-clearfix w-dyn-items w-row">
+				@foreach (Recipe item in Model.Content.Children)
+				{
+					
+						<div class="recipe-item w-col w-col-4 w-dyn-item">
+							<a class="recipe-image-block w-inline-block" href="@item.Url" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/56c71e9678ef0cf7030714ab/56c84ba7460cb4940dbaa03c_Recipe-20.jpg');">
+								<div class="recipe-overlay-block" data-ix="show-video-overlay-icon">
+									<div class="recipe-title-wrapper">
+										<div class="recipe-block-info-block w-clearfix">
+											<img class="recipe-block-small-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c7421792be8b00043c9fee_Icon-clock-white.png" width="15">
+											<div class="recipe-block-info-title">2 hours 10 minutes</div>
+										</div>
+										<div class="recipe-title">@item.Header</div>
+									</div>
+									<div class="recipe-video-overlay-block" data-ix="hide-video-overlay-icon"><img class="overlay-play-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c8496c0f1965960d68c90a_Icon-play-2.png"></div>
+								</div>
+							</a>
+							<a class="recipe-category-link-block w-button"
+							   href="/category/appetizers">Appetizers</a>
+						</div>
+				 }
+			</div>
+			</div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+
+@{
+    var selection = Model.Content.Site().FirstChild("categories").Children("breakfast")
+                        .Where(x => x.IsVisible());
+}
+
+
+<div class="top-section" id="top">
+    <div class="centered main-content-wrapper">
+        <a class="show-categories top-nav-link w-button w-hidden-main w-hidden-medium" data-ix="show-mobile-categories" href="@Model.Content.Site().FirstChild("categories").Url">Show Recipe Categories</a>
+        <div class="categories-wrapper">
+            @*<a class="top-nav-link w-button" href="/recipes">All Recipes</a>*@
+            @*<a class="top-nav-link w-button" href="/">Favorites</a>*@
+            @foreach (Breakfast item in selection)
+            {
+                <a class="top-nav-link w-button" href="@item.Url">@item.CategoryName</a>
+            }
+
+            @*<a class="top-nav-link w-button" href="/category/appetizers">Appetizers</a>
+                <a class="top-nav-link w-button" href="/category/salads">Salads</a>
+                <a class="top-nav-link w-button" href="/category/soups">Soups</a>
+                <a class="top-nav-link w-button" href="/category/desserts">Desserts</a>
+                <a class="top-nav-link w-button" href="/category/main-dishes">Main Dishes</a>*@
+            <a class="top-nav-link w-button" href="@Model.Content.Site().FirstChild("categories").Url">View All Categories</a>
+        </div>
+    </div>
+</div>

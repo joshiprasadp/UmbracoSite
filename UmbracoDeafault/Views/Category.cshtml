@@ -1,0 +1,61 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Breakfast>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+<section name="sub-categories">
+    @Html.Partial("Header_Footer/show-categories")
+</section>
+
+@*@Html.Partial("List_All_Recipes")*@
+
+<div class="category-header page-header" style="background-image: url('@Model.Content.CategoryMainImage.Url');">
+    <div class="page-header-overlay with-top-categories">
+        <div class="main-content-wrapper">
+            <h1 class="page-title" data-ix="fade-in-on-load">@Model.Content.CategoryName</h1>
+            <h1 class="page-title subtitle" data-ix="fade-in-on-load-2">@Model.Content.CategoryDescription</h1>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="centered main-content-wrapper">
+        <div class="w-dyn-list">
+            @if (Model.Content.Children().Count() == 0)
+            {
+                <div class="empty-state w-dyn-empty">
+                    <img class="empty-state-icon" sizes="60px" 
+                         src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c841bd1e4c5a667cd9b06a_Icon-plate.png" srcset="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c841bd1e4c5a667cd9b06a_Icon-plate-p-500x500.png 500w, http://uploads.webflow.com/56c71dfd442dd14d71672871/56c841bd1e4c5a667cd9b06a_Icon-plate.png 512w">
+                    <p>Sorry, no recipes found in this category!</p>
+                </div>
+            }
+            else
+            {
+                <div class="w-clearfix w-dyn-items w-row">
+                    @foreach (Recipe r in Model.Content.Children())
+                    {
+                        <div class="recipe-item w-col w-col-4 w-dyn-item">
+                            <a class="recipe-image-block w-inline-block" href="@r.Url" style="background-image: url('@r.RecipeImage.Url');">
+                                <div class="recipe-overlay-block" data-ix="show-video-overlay-icon">
+                                    <div class="recipe-title-wrapper">
+                                        <div class="recipe-block-info-block w-clearfix">
+                                            <img class="recipe-block-small-icon"
+                                                 src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c7421792be8b00043c9fee_Icon-clock-white.png" width="15">
+                                            <div class="recipe-block-info-title">2 hours 10 minutes</div>
+                                        </div>
+                                        <div class="recipe-title">@r.Name</div>
+                                    </div>
+                                    <div class="recipe-video-overlay-block" data-ix="hide-video-overlay-icon"><img class="overlay-play-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c8496c0f1965960d68c90a_Icon-play-2.png"></div>
+                                </div>
+                            </a><a class="recipe-category-link-block w-button" href="@r.Parent.Url">@r.Parent.Name</a>
+                        </div>
+
+
+
+                    }
+                </div>
+            }
+                
+            </div>
+        </div>
+    </div>

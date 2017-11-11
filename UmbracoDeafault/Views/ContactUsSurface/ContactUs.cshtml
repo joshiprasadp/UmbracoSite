@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Umbraco.Web
+@using UmbracoDeafault.Controllers
+
+@{
+    Layout = "~/Views/Master.cshtml";
+}
+
+<h2>ContactUs</h2>
+
+@using (Html.BeginUmbracoForm<ContactUsSurfaceController>("Index"))
+{
+        <input class="field w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Enter your name" type="text">
+        <input class="field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
+        <input class="button suscribe-button w-button" data-wait="Please wait..." type="submit" value="Subscribe now">
+}

@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+    var metadata = Model.Content.GetPropertyValue<Epiphany.SeoMetadata.SeoMetadata>("metadata");
+}
+
+@metadata.UrlName
+
+<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">

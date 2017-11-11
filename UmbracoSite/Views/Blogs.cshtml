@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "WebBase.cshtml";
+}
+
+@* the fun starts here *@
+
+
+@{
+
+    <div id="fh5co-wrapper">
+        <div id="fh5co-page">
+            <div class="fh5co-hero">
+                <div class="fh5co-overlay"></div>
+                <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url('../images/cover_bg_1.jpg');">
+                    <div class="desc animate-box">
+                        <h2>@CurrentPage.blogTitle</h2>
+                        <span>@CurrentPage.blogCreationDate</span>
+                        <p>@CurrentPage.blogContent</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}

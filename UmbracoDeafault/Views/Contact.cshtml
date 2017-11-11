@@ -1,0 +1,39 @@
+﻿@inherits UmbracoTemplatePage<Contact>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using Umbraco.Web;
+@using UmbracoDeafault.Controllers;
+@{
+    Layout = "Master.cshtml";
+}
+
+<div class="contact page-header">
+    <div class="page-header-overlay">
+        <div class="main-content-wrapper">
+            <div class="page-title-wrapper">
+                <h1 class="page-title" data-ix="fade-in-on-load">Contact us</h1>
+                <h1 class="page-title subtitle" data-ix="fade-in-on-load-2">Suggestions? Questions? Contact us below.</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="main-content-wrapper">
+        <div class="overall-row w-row">
+            <div class="contact-column w-col w-col-4">
+                <h5 class="color-column-title">Suggestions?</h5>
+                <p>Do you have suggestions for us? We are interested to hear them!</p><a class="button w-button" data-ix="open-popup" href="#">Send a Suggestion</a>
+            </div>
+            <div class="contact-column w-col w-col-4">
+                <h5 class="color-column-title">Questions?</h5>
+                <p>Do you have suggestions for us? We are interested to hear them!</p><a class="button w-button" data-ix="open-popup" href="#">Send an Email</a>
+            </div>
+            <div class="contact-column last w-col w-col-4">
+                <h5 class="color-column-title">Follow us!</h5>
+                <p>Be sure not to miss us on social media. We hope to see you there!</p>
+                <a class="social-button w-inline-block" href="http://www.facebook.com" target="_blank"><img class="social-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c8462c1e4c5a667cd9b84c_Icon-facebook.png"></a>
+                <a class="social-button w-inline-block" href="http://www.twitter.com" target="_blank"><img class="social-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c846422687776b7c708984_Icon-twitter.png"></a>
+                <a class="social-button w-inline-block" href="http://www.pinterest.com" target="_blank"><img class="social-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c71dfd442dd14d71672880_Icon-pinterest.png"></a>
+            </div>
+        </div>
+    </div>
+</div>

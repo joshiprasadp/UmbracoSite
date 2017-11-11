@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ContentPage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+@*@Html.Partial("~/Views/Partials/SectionHeader.cshtml")*@
+
+<section class="about-us">
+    <div class="page-header">
+        <div class="page-header-overlay">
+            <div class="main-content-wrapper">
+                <div class="page-title-wrapper">
+                    <h1 class="page-title" data-ix="fade-in-on-load">@Model.Content.PageTitle</h1>
+                    <h1 class="page-title subtitle" data-ix="fade-in-on-load-2">About Pranali Shinde.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="section">
+        <div class="main-content-wrapper">
+            <div class="overall-row w-row">
+                <div class="column-left w-col w-col-12">
+                    <p class="intro-paragraph"></p>
+                    Html.GetGridHtml(Model.Content, "bodyText")
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+    
+
+    
+
+</section>

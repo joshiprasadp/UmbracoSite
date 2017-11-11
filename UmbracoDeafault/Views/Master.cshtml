@@ -1,0 +1,50 @@
+﻿
+@using System.Web.Optimization;
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+<!doctype html>
+<html data-wf-domain="localhost" lang="en"
+      class="w-mod-js w-mod-no-touch w-mod-video w-mod-no-ios wf-bitter-n4-active wf-bitter-n7-active wf-bitter-i4-active wf-dancingscript-n4-active wf-dancingscript-n7-active wf-sourcesanspro-n2-active wf-sourcesanspro-n3-active wf-sourcesanspro-n4-active wf-sourcesanspro-i4-active wf-sourcesanspro-n6-active wf-sourcesanspro-n7-active wf-sourcesanspro-n9-active wf-active">
+<head>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="keywords" content="" />
+    <meta name="author" content="Pranalis Kitchen" />
+    
+    @Styles.Render("~/bundles/style")
+    @*@Scripts.Render("~/bundles/webfont")*@
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bitter:400,700,400italic%7CDancing+Script:regular,700%7CSource+Sans+Pro:200,300,regular,italic,600,700,900">
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ["Bitter:400,700,400italic", "Dancing Script:regular,700", "Source Sans Pro:200,300,regular,italic,600,700,900"]
+            }
+        });
+    </script>
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="@Umbraco.TypedMedia(1211).Url" rel="shortcut icon" type="image/x-icon">
+    <link href="@Umbraco.TypedMedia(1211).Url" rel="apple-touch-icon">
+    
+</head>
+<body class="frontpage theme-font-40 theme-color-37">
+    <div class="mobile-nav">
+        <nav class="nav-bar">
+            @Html.Partial("Header_Footer/Header")
+        </nav>
+    </div>
+
+    <main>
+        @RenderBody()
+    </main>
+    <section name="footer">
+        @Html.Partial("Header_Footer/Footer")
+    </section>
+ 
+    @Scripts.Render("~/bundles/jquery");
+    @Scripts.Render("~/bundles/siteScripts");
+   
+</body>
+</html>

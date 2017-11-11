@@ -1,0 +1,133 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using UmbracoDeafault.Controllers
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+    var backgroundImage = Model.Content.HeroBackgroundImage != null ? Model.Content.HeroBackgroundImage.Url : String.Empty;
+}
+
+<section name="Page_Header">
+    <div class="page-header">
+        <div class="home page-header-overlay" id="top">
+            <div class="main-content-wrapper">
+                <div class="page-title-wrapper">
+                    <h1 class="page-title">Delicious recipes. <br>Daily updated.</h1>
+                    <h1 class="page-title subtitle">Daily new Recipes and Cooking tips.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section name="featured_section">
+    @Html.Partial("Sections/Home/Featured_Section")
+</section>
+
+
+<section name="">
+    @Html.Partial("Sections/Home/Most_Popular_Categories")
+</section>
+
+<section name="tint">
+    @Html.Partial("Sections/Home/Recently_Added_Recipes")
+
+</section>
+
+<section name="color_section">
+    <div class="color section">
+        <div class="centered main-content-wrapper">
+            <div class="section-title-wrapper">
+                <h2 class="section-title white">Current Favorites</h2>
+                <h2 class="light section-title subtitle">Every week we present you with a selection of our personal favorite recipes. Enjoy trying them out!</h2>
+            </div>
+            <div class="favorites-row w-row">
+                <div class="favorites-column-left w-col w-col-7">
+                    <div class="w-dyn-list">
+                        <div class="w-clearfix w-dyn-items">
+                            <div class="recipe-item w-dyn-item">
+                                <a class="favorite-large recipe-image-block w-inline-block" href="/recipes/real-italian-pasta" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/56c71e9678ef0cf7030714ab/56c83ee41e4c5a667cd9ae91_Recipe-16.jpg');">
+                                    <div class="recipe-overlay-block">
+                                        <div class="recipe-title-wrapper">
+                                            <div class="recipe-block-info-block w-clearfix">
+                                                <img class="recipe-block-small-icon" src="@Umbraco.Media("1158").Url" width="15">
+                                                <div class="recipe-block-info-title">2 hours 10 minutes</div>
+                                            </div>
+                                            <div class="recipe-title">Real Italian Pasta</div>
+                                        </div>
+                                    </div>
+                                </a><a class="recipe-category-link-block w-button" href="/category/salads">Salads</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="favorites-column-right w-col w-col-5">
+                    <div class="w-dyn-list">
+                        <div class="w-clearfix w-dyn-items">
+                            <div class="recipe-item w-dyn-item">
+                                <a class="recipe-image-block w-inline-block" href="/recipes/ham-and-egg-summer-salad" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/56c71e9678ef0cf7030714ab/56c83e4e0f1965960d68bbf7_Recipe-10.jpg');">
+                                    <div class="recipe-overlay-block">
+                                        <div class="recipe-title-wrapper">
+                                            <div class="recipe-block-info-block w-clearfix">
+                                                <img class="recipe-block-small-icon" src="@Umbraco.Media("1158").Url" width="15">
+                                                <div class="recipe-block-info-title">15 minutes</div>
+                                            </div>
+                                            <div class="recipe-title">Ham and Egg Summer Salad</div>
+                                        </div>
+                                    </div>
+                                </a><a class="recipe-category-link-block w-button" href="/category/salads">Salads</a>
+                            </div>
+                            <div class="recipe-item w-dyn-item">
+                                <a class="recipe-image-block w-inline-block" href="/recipes/tasty-mozarella-buns" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/56c71e9678ef0cf7030714ab/56c83e281e4c5a667cd9adf7_Recipe-8.jpg');">
+                                    <div class="recipe-overlay-block">
+                                        <div class="recipe-title-wrapper">
+                                            <div class="recipe-block-info-block w-clearfix">
+                                                <img class="recipe-block-small-icon" src="@Umbraco.Media("1158").Url" width="15">
+                                                <div class="recipe-block-info-title">2 hours 10 minutes</div>
+                                            </div>
+                                            <div class="recipe-title">Tasty Mozarella Buns</div>
+                                        </div>
+                                    </div>
+                                </a><a class="recipe-category-link-block w-button" href="/category/main-dishes">Main Dishes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><a class="button dark view-more w-button" href="/favorite-recipes">View All Favorite Recipes</a>
+        </div>
+    </div>
+</section>
+
+
+
+<section name="Image_Section">
+    <div class="image-section">
+        <div class="image-section-overlay">
+            <div class="main-content-wrapper">
+                <div class="image-section-title-wrapper">
+                    <div class="image-section-title">Stay updated!</div>
+                    <div class="image-section-title subtitle">Don't miss any of our new recipes and tips anymore. Subscribe to our newsletter!</div>
+
+                    <div class="newsletter-form w-form">
+                        @using (Html.BeginUmbracoForm<ContactUsSurfaceController>("Index"))
+                        {
+                            <input class="field w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Enter your name" type="text">
+                            <input class="field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
+                            <input class="button suscribe-button w-button" data-wait="Please wait..." type="submit" value="Subscribe now">
+                        }
+                        @*<form action="" data-name="Newsletter Form" id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form">
+                                <input class="field w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Enter your name" type="text">
+                                <input class="field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
+                                <input class="button suscribe-button w-button" data-wait="Please wait..." type="submit" value="Subscribe now">
+                            </form>*@
+                        <div class="success-bg w-form-done">
+                            <p>Thank you! Your submission has been received! Please check your inbox for confirmation email.</p>
+                        </div>
+                        <div class="error-bg w-form-fail">
+                            <p>Oops! Something went wrong while submitting the form</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

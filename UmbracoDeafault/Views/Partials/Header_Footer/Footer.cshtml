@@ -1,0 +1,81 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{ 
+    var selection = Model.Content.Site().Descendants("breakfast").Where(x => x.IsVisible());
+    ICollection<Breakfast> List = new List<Breakfast>();
+    selection.ToList().ForEach(x => List.Add((Breakfast)x));
+
+    var q = Model.Content.GetPropertyValue<IEnumerable<IPublishedContent>>("featuredRecipeList");
+
+    var recentlyAdded = Model.Content.Site().Descendants("recipe")
+        .Where(x => x.IsVisible())
+        .OrderByDescending(x => x.CreateDate)
+        .Take(6);
+
+}
+
+ <div class="footer">
+        <div class="main-content-wrapper">
+            <div class="w-row">
+                <div class="footer-column w-col w-col-3">
+                    <div class="footer-title">Categories</div>
+                    <div class="w-dyn-list">
+                        <div class="w-dyn-items">
+                            @foreach (Breakfast item in List)
+                            {
+                                <div class="w-dyn-item"><a class="footer-link" href="@item.Url">@item.CategoryName</a></div>
+                            }
+                            
+                            @*<div class="w-dyn-item"><a class="footer-link" href="/category/salads">Salads</a></div>
+                            <div class="w-dyn-item"><a class="footer-link" href="/category/appetizers">Appetizers</a></div>
+                            <div class="w-dyn-item"><a class="footer-link" href="/category/soups">Soups</a></div>
+                            <div class="w-dyn-item"><a class="footer-link" href="/category/desserts">Desserts</a></div>
+                            <div class="w-dyn-item"><a class="footer-link" href="/category/main-dishes">Main Dishes</a></div>*@
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column w-col w-col-3">
+                    <div class="footer-title">Useful Tags</div>
+                    <div class="w-dyn-list">
+                        <div class="w-dyn-items">
+                            
+                            
+                            <div class="w-dyn-item"><a class="footer-link" href="/tags/steamed">Steamed</a></div>
+                            <div class="w-dyn-item"><a class="footer-link" href="/tags/grill">Grill</a></div>
+                            <div class="w-dyn-item"><a class="footer-link" href="/tags/birthday">Birthday</a></div>
+                            <div class="w-dyn-item"><a class="footer-link" href="/tags/new-year">New year</a></div>
+                            <div class="w-dyn-item"><a class="footer-link" href="/tags/christmas">Christmas</a></div>
+                            <div class="w-dyn-item"><a class="footer-link" href="/tags/italian">Italian</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column w-col w-col-3">
+                    <div class="footer-title">Favorite Recipes</div>
+                    <div class="w-dyn-list">
+                        <div class="w-dyn-items">
+                            @*@foreach (var item in q)
+                            {
+                                <div class="w-dyn-item"><a class="footer-link" href="@item.Url">@item.Name</a></div>
+                            }*@
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column last w-col w-col-3">
+                    <div class="footer-title">Recently Added</div>
+                    <div class="w-dyn-list">
+                        <div class="w-dyn-items">
+                            @foreach (Recipe item in recentlyAdded)
+                            {
+                                <div class="w-dyn-item"><a class="footer-link" href="@item.Url">@item.Header</a></div>
+
+                            }
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-block">
+                <p class="bottom-footer-paragraph">Copyright © Pranalis Kitchen</p>
+            @*<a class="bottom-footer-link" href="/contact-us">Contact us</a><a class="bottom-footer-link" href="/about-us">About us</a><a class="bottom-footer-link" href="/blog">Blog</a><a class="bottom-footer-link" href="/video-recipes">Videos</a><a class="bottom-footer-link" href="/favorite-recipes">Favorites</a><a class="bottom-footer-link" href="/recipes">Recipes</a>*@</div>
+            
+        </div><a class="back-to-top-button w-button w-hidden-medium w-hidden-small w-hidden-tiny" href="#top">Back to top</a>
+    </div>

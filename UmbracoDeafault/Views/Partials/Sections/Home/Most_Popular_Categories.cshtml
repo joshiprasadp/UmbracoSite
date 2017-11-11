@@ -1,0 +1,38 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+        var query = Model.Content.Site().Children("favoriteRecipes").FirstOrDefault()
+            .GetPropertyValue<IEnumerable<IPublishedContent>>("popularCategories");
+        List<Breakfast> List = new List<Breakfast>();
+        query.ToList().ForEach(item=> List.Add((Breakfast)item));
+       <div class="section">
+            <div class="centered main-content-wrapper">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">Most <span class="section-title-color">Popular</span> Categories</h2>
+                    <h2 class="section-title subtitle">Be sure not to miss out the categories of these most popular categories. Enjoy trying them out!</h2>
+                </div>
+                <div class="popular-categories-list-wrapper w-dyn-list">
+                    <div class="category-list w-clearfix w-dyn-items w-row">
+                        
+                        @foreach (var item in List)
+                        {
+                            <div class="category-item w-col w-col-4 w-dyn-item">
+                                <a class="category recipe-image-block w-inline-block" href="@item.Url" style="background-image: url('@item.CategoryImage.Url');">
+                                    <div class="recipe-overlay-block" data-ix="show-arrow-icon" style="transition: background-color 0.2s ease 0s;">
+                                        <div class="recipe-title-wrapper">
+                                            <div class="recipe-title">@item.CategoryName</div>
+                                            <div class="recipe-title view-recipes">View All Recipes</div>
+                                            <img class="view-recipes-icon-arrow" data-ix="hide-arrow-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c870bb8e937d52236dd084_Icon-arrow-right-white.png" style="opacity: 0; transform: translateX(30px) translateY(0px) translateZ(0px);">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+}

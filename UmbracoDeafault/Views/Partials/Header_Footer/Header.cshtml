@@ -1,0 +1,37 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+<div class="navbar w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
+    <div class="w-container">
+        <a class="logo-block w-nav-brand w--current" href="/">
+            <img class="logo" sizes="116.65625px" 
+                 src="@Umbraco.TypedMedia(1212).Url"
+                 srcset="@Umbraco.TypedMedia(1212).Url 500w, @Umbraco.TypedMedia(1212).Url 800w, 
+                 @Umbraco.TypedMedia(1212).Url 945w">
+        </a>
+        <nav class="nav-menu w-nav-menu" role="navigation">
+            @*<div class="dropdown w-dropdown" data-delay="0" style="max-width: 940px;">
+                <div class="dropdown nav-link w-dropdown-toggle">
+                    <div>Home</div>
+                    <div class="dropdown-icon w-icon-dropdown-toggle"></div>
+                </div>
+                <nav class="dropdown-list w-dropdown-list">
+                    <div class="dropdown-top-block w-hidden-medium w-hidden-small w-hidden-tiny"></div>
+                    <a class="dropdown-link w-dropdown-link w--current" href="/">Home (Standard)</a>
+                    <a class="dropdown-link w-dropdown-link" href="/home-sidebar">Home (Sidebar)</a>
+                </nav>
+            </div>*@
+            <a class="home nav-link recipes w-nav-link" href="/" style="max-width: 940px;">Home</a>
+            <a class="nav-link recipes w-nav-link" href="/video-recipes-categories" style="max-width: 940px;">Video Recipes</a>
+            <a class="favorite nav-link w-nav-link" href="/favorites" style="max-width: 940px;">Favorites</a>
+            @*<a class="nav-link videos w-nav-link" href="/video-recipes" style="max-width: 940px;">Video Recipes</a>*@
+           @* <a class="blog nav-link w-nav-link" href="/blog" style="max-width: 940px;">Blog</a>*@
+            <a class="about nav-link w-nav-link" href="/about-us" style="max-width: 940px;">About us</a>
+            <a class="contact nav-link w-nav-link" href="/contact" style="max-width: 940px;">Contact us</a>
+            <a class="search nav-link w-nav-link" href="/search" style="max-width: 940px;">Search</a>
+        </nav>
+        <div class="menu-button w-nav-button">
+            <div class="w-icon-nav-menu"></div>
+        </div>
+    </div>
+    <div class="w-nav-overlay" data-wf-ignore=""></div>
+</div>

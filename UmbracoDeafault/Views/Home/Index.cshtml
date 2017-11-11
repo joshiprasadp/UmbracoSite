@@ -1,0 +1,17 @@
+﻿@*@inherits Umbraco.Web.Mvc.renderm*@
+@{
+   Layout = "~/Views/Master.cshtml";
+}
+
+@if(ViewBag.categoryName != null)
+{
+    <h3>
+        @ViewBag.categoryName
+
+    </h3>
+}else
+{
+    <h3>Not rendered.</h3>
+}
+
+<h3>@ViewBag.categoryName</h3>

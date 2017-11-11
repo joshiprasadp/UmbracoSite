@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>README.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual</orgPath>
+      <orgName>README.md</orgName>
+    </file>
+    <file>
+      <guid>04dc9a1c-e79c-48d0-8781-9b75c1896595_README.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/1. Introduction</orgPath>
+      <orgName>README.md</orgName>
+    </file>
+    <file>
+      <guid>1. Logging In and Out.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco</orgPath>
+      <orgName>1. Logging In and Out.md</orgName>
+    </file>
+    <file>
+      <guid>2. Umbraco Interface.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco</orgPath>
+      <orgName>2. Umbraco Interface.md</orgName>
+    </file>
+    <file>
+      <guid>3. Creating, Saving and Publishing Content.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco</orgPath>
+      <orgName>3. Creating, Saving and Publishing Content.md</orgName>
+    </file>
+    <file>
+      <guid>4. Finding Content.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco</orgPath>
+      <orgName>4. Finding Content.md</orgName>
+    </file>
+    <file>
+      <guid>5. Editing Existing Content.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco</orgPath>
+      <orgName>5. Editing Existing Content.md</orgName>
+    </file>
+    <file>
+      <guid>6. Ordering Pages.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco</orgPath>
+      <orgName>6. Ordering Pages.md</orgName>
+    </file>
+    <file>
+      <guid>7. Moving a Page.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco</orgPath>
+      <orgName>7. Moving a Page.md</orgName>
+    </file>
+    <file>
+      <guid>8. Copying a Page.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco</orgPath>
+      <orgName>8. Copying a Page.md</orgName>
+    </file>
+    <file>
+      <guid>9. Deleting and Restoring Pages.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco</orgPath>
+      <orgName>9. Deleting and Restoring Pages.md</orgName>
+    </file>
+    <file>
+      <guid>d276d27d-d561-4b0b-b7bc-404ecb81454e_README.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco</orgPath>
+      <orgName>README.md</orgName>
+    </file>
+    <file>
+      <guid>blankPage.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>blankPage.jpg</orgName>
+    </file>
+    <file>
+      <guid>dashboardSlideout.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>dashboardSlideout.jpg</orgName>
+    </file>
+    <file>
+      <guid>editPage.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>editPage.jpg</orgName>
+    </file>
+    <file>
+      <guid>landingPage.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>landingPage.jpg</orgName>
+    </file>
+    <file>
+      <guid>loginScreen.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>loginScreen.jpg</orgName>
+    </file>
+    <file>
+      <guid>logout.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>logout.jpg</orgName>
+    </file>
+    <file>
+      <guid>movePage.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>movePage.jpg</orgName>
+    </file>
+    <file>
+      <guid>orderPages.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>orderPages.jpg</orgName>
+    </file>
+    <file>
+      <guid>pageCreationSlidout.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>pageCreationSlidout.jpg</orgName>
+    </file>
+    <file>
+      <guid>parentwithList.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>parentwithList.jpg</orgName>
+    </file>
+    <file>
+      <guid>parrentwithChildren.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>parrentwithChildren.jpg</orgName>
+    </file>
+    <file>
+      <guid>recycleBin.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>recycleBin.jpg</orgName>
+    </file>
+    <file>
+      <guid>saveAndPublish.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>saveAndPublish.jpg</orgName>
+    </file>
+    <file>
+      <guid>scheduledPublish.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>scheduledPublish.jpg</orgName>
+    </file>
+    <file>
+      <guid>search.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>search.jpg</orgName>
+    </file>
+    <file>
+      <guid>section tree content.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>section tree content.jpg</orgName>
+    </file>
+    <file>
+      <guid>smallScreenDashboard.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/2. Getting Started With Umbraco/images</orgPath>
+      <orgName>smallScreenDashboard.jpg</orgName>
+    </file>
+    <file>
+      <guid>1. Rich Text Editor.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content</orgPath>
+      <orgName>1. Rich Text Editor.md</orgName>
+    </file>
+    <file>
+      <guid>f9b63352-9ed4-4e90-b79c-a52fae93e6bb_README.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content</orgPath>
+      <orgName>README.md</orgName>
+    </file>
+    <file>
+      <guid>anchorButton.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>anchorButton.jpg</orgName>
+    </file>
+    <file>
+      <guid>anchorDialogue.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>anchorDialogue.jpg</orgName>
+    </file>
+    <file>
+      <guid>code.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>code.jpg</orgName>
+    </file>
+    <file>
+      <guid>editorBar.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>editorBar.jpg</orgName>
+    </file>
+    <file>
+      <guid>externalLink.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>externalLink.jpg</orgName>
+    </file>
+    <file>
+      <guid>formats.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>formats.jpg</orgName>
+    </file>
+    <file>
+      <guid>internalLink.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>internalLink.jpg</orgName>
+    </file>
+    <file>
+      <guid>linkAnchor.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>linkAnchor.jpg</orgName>
+    </file>
+    <file>
+      <guid>linkButton.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>linkButton.jpg</orgName>
+    </file>
+    <file>
+      <guid>linkEmail.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>linkEmail.jpg</orgName>
+    </file>
+    <file>
+      <guid>linkMedia.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>linkMedia.jpg</orgName>
+    </file>
+    <file>
+      <guid>macroEditor.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>macroEditor.jpg</orgName>
+    </file>
+    <file>
+      <guid>macroPicker.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>macroPicker.jpg</orgName>
+    </file>
+    <file>
+      <guid>mediaPicker.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>mediaPicker.jpg</orgName>
+    </file>
+    <file>
+      <guid>mediaUpload.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>mediaUpload.jpg</orgName>
+    </file>
+    <file>
+      <guid>removeFormat.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>removeFormat.jpg</orgName>
+    </file>
+    <file>
+      <guid>tableProperties.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>tableProperties.jpg</orgName>
+    </file>
+    <file>
+      <guid>tables.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>tables.jpg</orgName>
+    </file>
+    <file>
+      <guid>unlink.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/3. Working with Content/images</orgPath>
+      <orgName>unlink.jpg</orgName>
+    </file>
+    <file>
+      <guid>1. Comparing Versions.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/4. Version Management</orgPath>
+      <orgName>1. Comparing Versions.md</orgName>
+    </file>
+    <file>
+      <guid>2. Rollback to a Previous Versions.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/4. Version Management</orgPath>
+      <orgName>2. Rollback to a Previous Versions.md</orgName>
+    </file>
+    <file>
+      <guid>709fd057-9cef-480e-926d-b6d37c0cfd04_README.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/4. Version Management</orgPath>
+      <orgName>README.md</orgName>
+    </file>
+    <file>
+      <guid>cancelRollback.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/4. Version Management/images</orgPath>
+      <orgName>cancelRollback.jpg</orgName>
+    </file>
+    <file>
+      <guid>rollback.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/4. Version Management/images</orgPath>
+      <orgName>rollback.jpg</orgName>
+    </file>
+    <file>
+      <guid>1. Working with Folders.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/5. Media Management</orgPath>
+      <orgName>1. Working with Folders.md</orgName>
+    </file>
+    <file>
+      <guid>2. Working with Images and Files.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/5. Media Management</orgPath>
+      <orgName>2. Working with Images and Files.md</orgName>
+    </file>
+    <file>
+      <guid>3. Cropping Images.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/5. Media Management</orgPath>
+      <orgName>3. Cropping Images.md</orgName>
+    </file>
+    <file>
+      <guid>77709835-1706-47b6-ad48-206be4c2af24_README.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/5. Media Management</orgPath>
+      <orgName>README.md</orgName>
+    </file>
+    <file>
+      <guid>createMedia.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/5. Media Management/images</orgPath>
+      <orgName>createMedia.jpg</orgName>
+    </file>
+    <file>
+      <guid>cropAndFocalPoint.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/5. Media Management/images</orgPath>
+      <orgName>cropAndFocalPoint.jpg</orgName>
+    </file>
+    <file>
+      <guid>mediaRecycle.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/5. Media Management/images</orgPath>
+      <orgName>mediaRecycle.jpg</orgName>
+    </file>
+    <file>
+      <guid>27fc9e00-8cc2-470d-a82f-025cdc443c1f_mediaUpload.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/5. Media Management/images</orgPath>
+      <orgName>mediaUpload.jpg</orgName>
+    </file>
+    <file>
+      <guid>mediMoveSlideout.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/5. Media Management/images</orgPath>
+      <orgName>mediMoveSlideout.jpg</orgName>
+    </file>
+    <file>
+      <guid>moveMedia.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/5. Media Management/images</orgPath>
+      <orgName>moveMedia.jpg</orgName>
+    </file>
+    <file>
+      <guid>zoomCrop.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/5. Media Management/images</orgPath>
+      <orgName>zoomCrop.jpg</orgName>
+    </file>
+    <file>
+      <guid>1. Tips when Working with Folders.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/6. Tips and Tricks</orgPath>
+      <orgName>1. Tips when Working with Folders.md</orgName>
+    </file>
+    <file>
+      <guid>2. Audit Trail.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/6. Tips and Tricks</orgPath>
+      <orgName>2. Audit Trail.md</orgName>
+    </file>
+    <file>
+      <guid>3. Changing Document Types.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/6. Tips and Tricks</orgPath>
+      <orgName>3. Changing Document Types.md</orgName>
+    </file>
+    <file>
+      <guid>4. Notifications.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/6. Tips and Tricks</orgPath>
+      <orgName>4. Notifications.md</orgName>
+    </file>
+    <file>
+      <guid>5. Preview Pane Responsive View.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/6. Tips and Tricks</orgPath>
+      <orgName>5. Preview Pane Responsive View.md</orgName>
+    </file>
+    <file>
+      <guid>6. Session Timeout.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/6. Tips and Tricks</orgPath>
+      <orgName>6. Session Timeout.md</orgName>
+    </file>
+    <file>
+      <guid>6d046524-3f18-476b-aa5e-91e7114af596_README.md</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/6. Tips and Tricks</orgPath>
+      <orgName>README.md</orgName>
+    </file>
+    <file>
+      <guid>auditTrail.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/6. Tips and Tricks/images</orgPath>
+      <orgName>auditTrail.jpg</orgName>
+    </file>
+    <file>
+      <guid>changDocType.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/6. Tips and Tricks/images</orgPath>
+      <orgName>changDocType.jpg</orgName>
+    </file>
+    <file>
+      <guid>notifications.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/6. Tips and Tricks/images</orgPath>
+      <orgName>notifications.jpg</orgName>
+    </file>
+    <file>
+      <guid>responsivePreview.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/6. Tips and Tricks/images</orgPath>
+      <orgName>responsivePreview.jpg</orgName>
+    </file>
+    <file>
+      <guid>a1e9c8ba-6808-4133-835e-8ab47afaa52a_loginScreen.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/images</orgPath>
+      <orgName>loginScreen.jpg</orgName>
+    </file>
+    <file>
+      <guid>logo.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/images</orgPath>
+      <orgName>logo.jpg</orgName>
+    </file>
+    <file>
+      <guid>cc8ed7d7-6518-4bae-8028-eb67638e09c7_logout.jpg</guid>
+      <orgPath>/UmbracoBookshelf/V7 Editors Manual/images</orgPath>
+      <orgName>logout.jpg</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>V7 Editors Manual for Bookshelf</name>
+      <version>0.1</version>
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>https://github.com/okhenry/V7-Editors-Manual</url>
+      <requirements>
+        <major>3</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Owen Henry</name>
+      <website>https://our.umbraco.org/member/104892</website>
+    </author>
+    <readme><![CDATA[]]></readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+</umbPackage>

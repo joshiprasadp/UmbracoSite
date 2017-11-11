@@ -1,0 +1,86 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+
+@{
+    var selection = Model.Content.Site().Children("favoriteRecipes").SingleOrDefault()
+                        .GetPropertyValue<IEnumerable<IPublishedContent>>("homePageFeaturedRecipes");
+
+    Recipe first = (Recipe)selection.FirstOrDefault();
+    Recipe second = (Recipe)selection.Take(2).LastOrDefault();
+    Recipe third = (Recipe)selection.LastOrDefault();
+
+}
+
+
+
+
+<section name="featured_Recipes">
+    <div class="featured-recipe-section">
+        <div class="featured-recipes main-content-wrapper w-clearfix">
+            <div class="featured-recipes-block" data-ix="zoom-fade-in">
+                <div class="featured-recipe-list-wrapper w-dyn-list">
+                    <div class="featured-recipe-list w-dyn-items">
+                        <div class="featured-recipe-item w-dyn-item">
+                            <a class="featured-recipe-link-block w-inline-block" href="@first.Url" style="background-image: url('@first.RecipeImage.Url');">
+                                <div class="featured-recipe-overlay">
+                                    <div class="featured-recipe-title">Featured Recipe!</div>
+                                    <div class="featured recipe-title-wrapper">
+                                        <div class="recipe-block-info-block w-clearfix">
+                                            <img class="recipe-block-small-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c7421792be8b00043c9fee_Icon-clock-white.png" width="15">
+                                            <div class="recipe-block-info-title">2 hours 10 minutes</div>
+                                        </div>
+                                        <div class="large recipe-title">@first.Header</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="_2 featured-recipes-block w-hidden-tiny" data-ix="zoom-fade-in-3">
+                <div class="featured-recipe-list-wrapper w-dyn-list">
+                    <div class="featured-recipe-list w-dyn-items">
+                        <div class="featured-recipe-item w-dyn-item">
+                            <a class="featured-recipe-link-block first w-inline-block" href="@second.Url" style="background-image: url('@second.RecipeImage.Url');">
+                                <div class="featured-recipe-overlay">
+                                    <div class="featured-recipe-title">Featured Recipe!</div>
+                                    <div class="featured recipe-title-wrapper">
+                                        <div class="recipe-block-info-block w-clearfix">
+                                            <img class="recipe-block-small-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c7421792be8b00043c9fee_Icon-clock-white.png" width="15">
+                                            <div class="recipe-block-info-title">2 hours 10 minutes</div>
+                                        </div>
+                                        <div class="large recipe-title">@second.Header</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @if (third != null)
+            {
+                <div class="featured-recipes-block w-hidden-tiny" data-ix="zoom-fade-in-2">
+                    <div class="featured-recipe-list-wrapper w-dyn-list">
+                        <div class="featured-recipe-list w-dyn-items">
+                            <div class="featured-recipe-item w-dyn-item">
+                                <a class="featured-recipe-link-block w-inline-block" href="@third.Url" style="background-image: url('@third.RecipeImage.Url');">
+                                    <div class="featured-recipe-overlay">
+                                        <div class="featured-recipe-title">Featured Recipe!</div>
+                                        <div class="featured recipe-title-wrapper">
+                                            <div class="recipe-block-info-block w-clearfix">
+                                                <img class="recipe-block-small-icon" src="http://uploads.webflow.com/56c71dfd442dd14d71672871/56c7421792be8b00043c9fee_Icon-clock-white.png" width="15">
+                                                <div class="recipe-block-info-title">1 hour</div>
+                                            </div>
+                                            <div class="large recipe-title">@third.Header</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            
+        </div>
+    </div>
+</section>
